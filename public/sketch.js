@@ -14,13 +14,13 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(1000, 1000);
 
 
   socket = io.connect('https://drawingfunthings.herokuapp.com/');
   //socket = io.connect('https://localhost:3000');
 
-  background("white");
+  background(color(random(255), random(100), random(255)));
   // handle the broadcast calls coming from the server
   socket.on('circle', newShapeDrawing);
   socket.on('emoji', newEmojiDrawing);
